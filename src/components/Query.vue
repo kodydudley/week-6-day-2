@@ -1,6 +1,6 @@
 <template>
-  <div class="Query">
-    <form @submit.prevent="getPicture()">
+  <div class="Query col-10 offset-1">
+    <form @submit.prevent="getPlanets()">
       <label for="query">Enter Date</label>
       <input
         type="text"
@@ -16,10 +16,20 @@
 
 
 <script>
+import { reactive } from "vue";
+import { planetService } from "../Services/PlanetService";
 export default {
   name: "Query",
   setup() {
-    return {};
+    const state = reactive({
+      quert: "",
+    });
+    return {
+      state,
+      getPlanets() {
+        planetService.getPlanets(state.query);
+      },
+    };
   },
   components: {},
 };
