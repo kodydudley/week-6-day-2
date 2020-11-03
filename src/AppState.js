@@ -3,5 +3,5 @@ import {
 } from 'vue'
 
 export const AppState = reactive({
-  planet: "",
+  planet: {},
 })

@@ -1,11 +1,7 @@
 <template>
   <div class="Results col-10 offset-1 mt-4">
     <h2 class="text-center">Results:</h2>
-    <planetPicture
-      v-for="planet in planets"
-      :planetData="planet"
-      :key="planet.explanation"
-    />
+    <planetPicture />
   </div>
 </template>
 
