@@ -1,6 +1,8 @@
 <template>
   <div class="PlanetPicture">
-    <h5>{{ state.planet.explanation }}</h5>
+    <h1 class="mb-3">{{ state.planet.title }}</h1>
+    <img :src="`${state.planet.url}`" alt="" srcset="" />
+    <h6 class="mt-3">{{ state.planet.explanation }}</h6>
   </div>
 </template>
 
