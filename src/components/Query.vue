@@ -1,7 +1,7 @@
 <template>
   <div class="Query col-10 offset-1">
     <form @submit.prevent="getPlanets()">
-      <label for="query">Enter Date</label>
+      <h4>Enter Date Below</h4>
       <input
         type="text"
         name="query"

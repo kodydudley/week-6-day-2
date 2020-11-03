@@ -1,6 +1,6 @@
 <template>
   <div class="Results col-10 offset-1 mt-4">
-    <h2 class="text-center">Results:</h2>
+    <h2 class="text-center">Results</h2>
     <planetPicture />
   </div>
 </template>

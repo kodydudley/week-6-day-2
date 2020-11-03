@@ -1,7 +1,12 @@
 <template>
   <div class="PlanetPicture">
     <h1 class="mb-3">{{ state.planet.title }}</h1>
-    <img :src="`${state.planet.url}`" alt="" srcset="" />
+    <div v-if="state.planet.media_type == 'image'">
+      <img :src="`${state.planet.url}`" alt="" srcset="" />
+    </div>
+    <div v-if="state.planet.media_type == 'video'">
+      <iframe :src="state.planet.url"></iframe>
+    </div>
     <h6 class="mt-3">{{ state.planet.explanation }}</h6>
   </div>
 </template>
