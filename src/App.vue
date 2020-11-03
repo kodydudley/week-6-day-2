@@ -1,17 +1,30 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container-fluid text-center">
+    <h1 class="align-middle">
+      <img style="height: 50px" alt="Vue logo" src="./assets/logo.png" />iew the
+      Astronomy Picture of the Day
+    </h1>
+    <query />
+    <div class="row">
+      <results />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import { computed } from "vue";
+import { AppState } from "./AppState.js";
+import Query from "./components/Query";
+import Results from "./components/Results";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  setup() {
+    return {
+      appState: computed(() => AppState),
+    };
+  },
+  components: { Query, Results },
+};
 </script>
 
 <style>
