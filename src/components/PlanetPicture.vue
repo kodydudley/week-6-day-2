@@ -1,20 +1,18 @@
 <template>
   <div class="PlanetPicture">
-    <h5>{{ state.explanation }}</h5>
+    <h5>{{ state.planet.explanation }}</h5>
   </div>
 </template>
 
 
 <script>
 import { computed, reactive } from "vue";
+import { AppState } from "../AppState";
 export default {
   name: "PlanetPicture",
-  props: {
-    planetData: Object,
-  },
-  setup(props) {
+  setup() {
     const state = reactive({
-      planet: computed(() => props.planetData),
+      planet: computed(() => AppState.planet),
     });
     return {
       state,
